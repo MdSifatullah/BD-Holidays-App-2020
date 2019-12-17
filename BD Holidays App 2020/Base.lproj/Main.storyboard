@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,87 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BD_Holidays_App_2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-XD-gBN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="245.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="holidays" translatesAutoresizingMaskIntoConstraints="NO" id="4GL-Gb-DHz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="245.5"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="4GL-Gb-DHz" firstAttribute="top" secondItem="QIY-XD-gBN" secondAttribute="top" id="2JC-5L-hf9"/>
+                                    <constraint firstAttribute="trailing" secondItem="4GL-Gb-DHz" secondAttribute="trailing" id="5TF-rB-9DK"/>
+                                    <constraint firstAttribute="bottom" secondItem="4GL-Gb-DHz" secondAttribute="bottom" id="IN7-9e-SuG"/>
+                                    <constraint firstItem="4GL-Gb-DHz" firstAttribute="leading" secondItem="QIY-XD-gBN" secondAttribute="leading" id="dGb-1a-QGt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EjS-l3-jGq">
+                                <rect key="frame" x="0.0" y="245.5" width="414" height="81.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holidays of Bangladesh 2020 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPW-tv-H1F">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="81.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.44017137449999999" green="0.46012881779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VPW-tv-H1F" secondAttribute="bottom" id="2ze-MY-raD"/>
+                                    <constraint firstItem="VPW-tv-H1F" firstAttribute="top" secondItem="EjS-l3-jGq" secondAttribute="top" id="K9l-XX-MH0"/>
+                                    <constraint firstAttribute="trailing" secondItem="VPW-tv-H1F" secondAttribute="trailing" id="auK-45-XFZ"/>
+                                    <constraint firstItem="VPW-tv-H1F" firstAttribute="leading" secondItem="EjS-l3-jGq" secondAttribute="leading" id="eum-yL-dTk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="612-nU-zkw">
+                                <rect key="frame" x="0.0" y="327" width="414" height="535"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="nFV-mk-HCO" customClass="CustomTableViewCell" customModule="BD_Holidays_App_2020" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nFV-mk-HCO" id="XIX-KI-JcG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Yah-ha-1hS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="vRk-9b-mhf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="612-nU-zkw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2to-zf-6BF"/>
+                            <constraint firstItem="EjS-l3-jGq" firstAttribute="top" secondItem="QIY-XD-gBN" secondAttribute="bottom" id="CYK-sL-nnV"/>
+                            <constraint firstItem="EjS-l3-jGq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EcN-kj-w9N"/>
+                            <constraint firstItem="QIY-XD-gBN" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.3" id="JvC-eZ-tEq"/>
+                            <constraint firstItem="612-nU-zkw" firstAttribute="top" secondItem="EjS-l3-jGq" secondAttribute="bottom" id="RVt-sd-ORK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="612-nU-zkw" secondAttribute="bottom" id="VaE-X5-FXm"/>
+                            <constraint firstAttribute="trailing" secondItem="QIY-XD-gBN" secondAttribute="trailing" id="WiT-nJ-QQ6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="612-nU-zkw" secondAttribute="trailing" id="ZKW-Q6-14j"/>
+                            <constraint firstItem="EjS-l3-jGq" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.1" id="jjz-1R-VHg"/>
+                            <constraint firstItem="QIY-XD-gBN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mlM-Yi-T6w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EjS-l3-jGq" secondAttribute="trailing" id="sWx-Qg-uwD"/>
+                            <constraint firstItem="QIY-XD-gBN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vx0-b3-NTN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="holidays" width="800" height="533"/>
+    </resources>
 </document>
