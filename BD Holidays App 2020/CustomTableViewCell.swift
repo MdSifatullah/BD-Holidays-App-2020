@@ -10,6 +10,9 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var DateShowLbl: UILabel!
+    
+    @IBOutlet weak var TitleShowLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
